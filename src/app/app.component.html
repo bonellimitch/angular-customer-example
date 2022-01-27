@@ -1,0 +1,11 @@
+
+
+<div class="main-container">
+  <div class="left-column">
+    <app-customer-search (selectedCustomer)="onSelectedCustomer($event)"></app-customer-search>
+  </div>
+  <mat-divider [vertical]="true"></mat-divider>
+  <div class="right-column">
+    <app-customer-detail *ngIf="selectedCustomer" [customer]="selectedCustomer"></app-customer-detail>
+  </div>
+</div>

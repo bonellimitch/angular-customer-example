@@ -1,0 +1,17 @@
+
+.main-container {
+    width: calc(100vw - 2rem);
+    height: calc(100vh - 2rem);
+    display: flex;
+    padding: 1rem;
+
+    .left-column {
+        width: 20vw;
+        padding: 1rem;
+    }
+
+    .right-column {
+        width: 80vw;
+        padding: 1rem;
+    }
+}
