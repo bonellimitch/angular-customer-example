@@ -20,11 +20,20 @@ export class CustomerDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.initEditForm();
+  }
+
+  private initEditForm() {
     this.editForm = new FormGroup({});
     this.firstNameControl = new FormControl('', Validators.required);
     this.lastNameControl = new FormControl('', Validators.required);
     this.editForm.setControl('firstName', this.firstNameControl);
     this.editForm.setControl('lastName', this.lastNameControl);
+  }
+
+  onEditUser(): void {
+    this.customer.firstName = this.firstNameControl.value;
+    this.customer.lastName = this.lastNameControl.value;
   }
 
 }

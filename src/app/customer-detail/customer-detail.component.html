@@ -20,7 +20,7 @@
                     <mat-error *ngIf="lastNameControl.errors?.required">Last name is required</mat-error>
                 </mat-form-field>
     
-                <button mat-stroked-button color="primary" [disabled]="!editForm.valid">Confirm</button>
+                <button mat-stroked-button color="primary" [disabled]="!editForm.valid" (click)="onEditUser()">Confirm</button>
             </form>
     </div>
 </div>
