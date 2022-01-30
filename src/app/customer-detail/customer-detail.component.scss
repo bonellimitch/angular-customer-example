@@ -1,0 +1,41 @@
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image-block {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+
+    img {
+        height: 150px;
+        width: 150px;
+        border-radius: 150px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.form-block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    form {
+        width: 65%;
+        padding: 0rem 1rem;
+
+        * {
+            padding: 0rem 1rem;
+        }
+    }
+}

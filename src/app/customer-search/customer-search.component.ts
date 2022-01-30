@@ -31,7 +31,7 @@ export class CustomerSearchComponent implements OnInit {
   doFilter(): void {
     if (!!this.filterValue) {
       this.filteredCustomers = this.customers
-        .filter(c => c.name.toLowerCase().indexOf(this.filterValue.toLowerCase()) >= 0 || c.lastname.toLowerCase().indexOf(this.filterValue.toLowerCase()) >= 0);
+        .filter(c => c.firstName.toLowerCase().indexOf(this.filterValue.toLowerCase()) >= 0 || c.lastName.toLowerCase().indexOf(this.filterValue.toLowerCase()) >= 0);
     } else {
       this.filteredCustomers = this.customers;
     }

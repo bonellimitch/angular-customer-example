@@ -10,6 +10,6 @@
     
 
     <div *ngFor="let customer of filteredCustomers">
-        <mat-card matRipple (click)="chooseCustomer(customer)">{{customer.name + ' ' + customer.lastname}}</mat-card>
+        <mat-card matRipple (click)="chooseCustomer(customer)">{{customer.firstName + ' ' + customer.lastName}}</mat-card>
     </div>
 </div>

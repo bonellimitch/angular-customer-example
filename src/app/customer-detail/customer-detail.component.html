@@ -1,3 +1,26 @@
-<div class="container">
-    <div>{{customer.name + ' ' + customer.lastname}}</div>
+<div class="container" *ngIf="customer && editForm">
+    <div class="image-block">
+        <img [src]="customer.image" />
+        <h2>{{customer.firstName + ' ' + customer.lastName}}</h2>
+    </div>
+
+    <div class="form-block">
+        <p>Di seguito puoi modificare il nome e cognome dell'utente selezionato</p>
+            <form [formGroup]="editForm">
+
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input [formControl]="firstNameControl" matInput placeholder="First Name">
+                    <mat-error *ngIf="lastNameControl.errors?.required">First name is required</mat-error>
+                </mat-form-field>
+    
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input [formControl]="lastNameControl" matInput placeholder="Last Name">
+                    <mat-error *ngIf="lastNameControl.errors?.required">Last name is required</mat-error>
+                </mat-form-field>
+    
+                <button mat-stroked-button color="primary" [disabled]="!editForm.valid">Confirm</button>
+            </form>
+    </div>
 </div>

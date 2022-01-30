@@ -11,6 +11,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatRippleModule } from '@angular/material/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { MatRippleModule } from '@angular/material/core';
     MatCardModule,
     MatIconModule,
     MatDividerModule,
-    MatRippleModule
+    MatRippleModule,
+    ReactiveFormsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
